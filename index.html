@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="QAOrbit is a hands-on playground for Playwright locator and UI automation practice." />
+  <title>QAOrbit — Automation Practice Lab</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home" aria-label="QAOrbit home">
+        <span class="brand-mark"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="brand-core">Q</span></span>
+        <span class="brand-word">QA<span>Orbit</span><small>Automation Practice Lab</small></span>
+      </a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <button class="nav-item active" data-page="home"><span class="nav-icon">⌂</span> Dashboard</button>
+      </nav>
+      <div class="side-label">PLAYGROUND</div>
+      <nav class="nav-list" aria-label="Practice modules">
+        <button class="nav-item" data-page="inputs"><span class="nav-icon">▤</span> Input Fields <span class="nav-count">10</span></button>
+        <button class="nav-item" data-page="buttons"><span class="nav-icon">◉</span> Buttons <span class="nav-count">8</span></button>
+        <button class="nav-item" data-page="checks"><span class="nav-icon">☑</span> Checkbox & Radio <span class="nav-count">6</span></button>
+        <button class="nav-item" data-page="locators"><span class="nav-icon">⌕</span> Locator Playground <span class="nav-count">12</span></button>
+      </nav>
+      <div class="side-label">COMING NEXT</div>
+      <nav class="nav-list" aria-label="Upcoming modules">
+        <button class="nav-item upcoming" data-page="dropdowns"><span class="nav-icon">▾</span> Dropdowns <span class="soon">Soon</span></button>
+        <button class="nav-item upcoming" data-page="tables"><span class="nav-icon">▦</span> Web Tables <span class="soon">Soon</span></button>
+        <button class="nav-item upcoming" data-page="dialogs"><span class="nav-icon">▣</span> Dialogs & Alerts <span class="soon">Soon</span></button>
+        <button class="nav-item upcoming" data-page="frames"><span class="nav-icon">▧</span> Frames <span class="soon">Soon</span></button>
+        <button class="nav-item upcoming" data-page="dynamic"><span class="nav-icon">⚡</span> Dynamic Elements <span class="soon">Soon</span></button>
+      </nav>
+      <div class="sidebar-footer"><div class="orbit-mini">✦</div><div><strong>Practice without limits.</strong><span>Built for automation learners</span></div></div>
+    </aside>
+
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+        <div class="breadcrumbs"><span>QAOrbit</span><span class="crumb-sep">/</span><strong id="currentCrumb">Dashboard</strong></div>
+        <div class="topbar-right"><span class="live-pill"><i></i> Practice Environment</span><a class="top-link" href="#about">About</a></div>
+      </header>
+      <div class="content" id="content">
+        <section class="page active" id="page-home">
+          <div class="hero">
+            <div class="hero-copy">
+              <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR AUTOMATION PLAYGROUND</div>
+              <h1>Welcome to your<br /><span>orbit of practice.</span></h1>
+              <p>Explore real UI elements, sharpen your locator skills, and build automation confidence—one interaction at a time.</p>
+              <button class="primary-btn" data-go="inputs">Start Practicing <span>→</span></button>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+              <div class="planet-ring ring-a"></div><div class="planet-ring ring-b"></div><div class="planet"></div><div class="planet-glow"></div><div class="orbit-dot dot-a"></div><div class="orbit-dot dot-b"></div><div class="orbit-dot dot-c"></div><div class="star star-a">✦</div><div class="star star-b">✧</div>
+            </div>
+            <div class="hero-bottom"><span>QAOrbit</span><span>EXPLORE&nbsp; · &nbsp;PRACTICE&nbsp; · &nbsp;AUTOMATE</span></div>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card"><div class="stat-icon blue">⌕</div><div class="stat-value">4</div><div class="stat-label">Practice modules available</div><div class="stat-foot">Ready to explore</div></div>
+            <div class="stat-card"><div class="stat-icon purple">⌗</div><div class="stat-value">30<span>+</span></div><div class="stat-label">Locator patterns to try</div><div class="stat-foot">Beginner to advanced</div></div>
+            <div class="stat-card"><div class="stat-icon cyan">⚡</div><div class="stat-value">∞</div><div class="stat-label">Practice opportunities</div><div class="stat-foot">Reset and try again</div></div>
+          </div>
+          <div class="section-heading"><div><div class="eyebrow">LEARNING ZONE</div><h2>Practice modules</h2></div><span class="section-note">Pick a module to get started</span></div>
+          <div class="module-grid">
+            <button class="module-card" data-go="inputs"><div class="module-icon blue-bg">▤</div><span class="module-tag beginner">BEGINNER</span><h3>Input Fields</h3><p>Explore textboxes, labels, placeholders, password fields, and attributes.</p><div class="module-meta"><span>10 elements</span><span class="card-arrow">↗</span></div></button>
+            <button class="module-card" data-go="buttons"><div class="module-icon violet-bg">◉</div><span class="module-tag beginner">BEGINNER</span><h3>Buttons</h3><p>Click, double-click, hover, disabled states, and dynamic button IDs.</p><div class="module-meta"><span>8 interactions</span><span class="card-arrow">↗</span></div></button>
+            <button class="module-card" data-go="checks"><div class="module-icon green-bg">☑</div><span class="module-tag beginner">BEGINNER</span><h3>Checkbox & Radio</h3><p>Practice selection, grouping, labels, and checked-state assertions.</p><div class="module-meta"><span>6 elements</span><span class="card-arrow">↗</span></div></button>
+            <button class="module-card" data-go="locators"><div class="module-icon orange-bg">⌕</div><span class="module-tag intermediate">INTERMEDIATE</span><h3>Locator Playground</h3><p>Work with CSS, XPath, dynamic IDs, and DOM relationships.</p><div class="module-meta"><span>12 challenges</span><span class="card-arrow">↗</span></div></button>
+          </div>
+          <div class="callout"><div class="callout-icon">✦</div><div><strong>Locator tip</strong><p>Start with user-facing locators like role, label, and text. Use CSS or XPath when the scenario calls for it.</p></div></div>
+        </section>
+
+        <section class="page" id="page-inputs">
+          <div class="page-heading"><div class="eyebrow">PLAYGROUND / FORMS</div><h1>Input Fields</h1><p>Practice identifying and interacting with different input types. Try multiple locator strategies for each element.</p></div>
+          <div class="practice-layout"><div class="practice-card"><div class="card-head"><div><h2>Input field collection</h2><p>Interact with the form elements below.</p></div><span class="badge">10 ELEMENTS</span></div>
+            <form id="practiceForm" class="form-grid" autocomplete="off">
+              <div class="field"><label for="qa-username">Username <span class="required">*</span></label><input id="qa-username" name="username" type="text" placeholder="Enter username" data-testid="username-input" /><small>Stable ID · name · placeholder · label</small></div>
+              <div class="field"><label for="qa-email">Email address</label><input id="qa-email" name="emailAddress" type="email" placeholder="name@example.com"/><small>Name attribute · type · placeholder</small></div>
+              <div class="field"><label for="qa-password">Password</label><input id="qa-password" name="password" type="password" placeholder="Enter password"/><small>Label · password type</small></div>
+              <div class="field"><label for="qa-phone">Phone number</label><input id="qa-phone" name="phone" type="tel" placeholder="10-digit mobile number"/><small>Placeholder locator</small></div>
+              <div class="field"><label for="qa-age">Age</label><input id="qa-age" name="age" type="number" min="18" max="100" placeholder="Enter age"/><small>Number input · min/max</small></div>
+              <div class="field"><label for="qa-date">Date of birth</label><input id="qa-date" name="dob" type="date"/><small>Native date input</small></div>
+              <div class="field full"><label for="qa-address">Address</label><textarea id="qa-address" name="address" rows="3" placeholder="Enter your address"></textarea><small>Textarea · CSS locator practice</small></div>
+              <div class="field"><label for="qa-search">Customer search</label><input id="qa-search" type="search" aria-label="Search customers" placeholder="Search customers..."/><small>ARIA label · search type</small></div>
+              <div class="field"><label for="qa-dynamic">Dynamic ID field</label><input id="qa-dynamic" type="text" placeholder="ID changes on refresh"/><small>Dynamic ID · prefix / contains locator</small></div>
+              <div class="field full"><label for="qa-comments">Comments</label><textarea id="qa-comments" class="comments-box" name="comments" placeholder="Share your comments..."></textarea><small>Class locator · textarea</small></div>
+              <div class="form-actions"><button type="submit" class="primary-btn">Submit Form <span>→</span></button><button type="reset" class="secondary-btn">Reset</button><span id="formStatus" class="form-status" role="status"></span></div>
+            </form>
+          </div><aside class="practice-side"><div class="hint-card"><div class="hint-title">⌕ Locator ideas</div><ul><li><code>get_by_label()</code></li><li><code>get_by_placeholder()</code></li><li><code>get_by_role()</code></li><li><code>locator('[name=...]')</code></li><li><code>locator('[id^=...]')</code></li></ul></div><div class="hint-card challenge-card"><div class="hint-title">🎯 Try this</div><p>Fill Username and Email using different locator strategies. Then locate the dynamic ID field without using its full ID.</p><button class="text-btn" data-go="locators">Open locator lab →</button></div></aside></div>
+        </section>
+
+        <section class="page" id="page-buttons">
+          <div class="page-heading"><div class="eyebrow">PLAYGROUND / ACTIONS</div><h1>Buttons</h1><p>Try different button interactions and inspect the result. IDs and labels are intentionally varied.</p></div>
+          <div class="practice-layout"><div class="practice-card"><div class="card-head"><div><h2>Button interactions</h2><p>Use clicks, hover, double-click, and locator variations.</p></div><span class="badge">8 INTERACTIONS</span></div>
+            <div class="button-lab"><div class="button-demo"><h3>Standard buttons</h3><div class="button-row"><button id="btn-primary-action" class="primary-btn" onclick="showButtonMessage('Primary button clicked!')">Primary Action</button><button name="secondaryAction" class="secondary-btn" onclick="showButtonMessage('Secondary button clicked!')">Secondary Action</button><button class="outline-btn" title="Tooltip button" onclick="showButtonMessage('Outline button clicked!')">Outline Button</button></div></div>
+            <div class="button-demo"><h3>Special interactions</h3><div class="button-row"><button id="double-click-target" class="secondary-btn" ondblclick="showButtonMessage('Double-click detected!')">Double-click Me</button><button id="hover-target" class="secondary-btn hover-btn" onmouseenter="this.textContent='Nice hover!'" onmouseleave="this.textContent='Hover Over Me'">Hover Over Me</button><button id="disabled-action" class="secondary-btn" disabled>Disabled Button</button></div></div>
+            <div class="button-demo"><h3>Dynamic ID button</h3><div class="button-row"><button id="dynamic-button" class="primary-btn" onclick="showButtonMessage('Dynamic ID button clicked!')">Dynamic ID Action</button><span class="inline-note">ID suffix changes when this page is loaded.</span></div></div>
+            <div class="button-demo"><h3>Duplicate text buttons</h3><div class="button-row"><button class="duplicate-btn" onclick="showButtonMessage('First Save clicked')">Save</button><button class="duplicate-btn" onclick="showButtonMessage('Second Save clicked')">Save</button><button class="duplicate-btn" onclick="showButtonMessage('Third Save clicked')">Save</button></div><span class="inline-note">Practice nth(), filtering, and scoping.</span></div>
+            <div class="result-box" id="buttonResult" role="status"><span class="result-dot"></span><span>Interaction results will appear here.</span></div>
+          </div></div><aside class="practice-side"><div class="hint-card"><div class="hint-title">⌕ Locator ideas</div><ul><li><code>get_by_role('button')</code></li><li><code>get_by_text()</code></li><li><code>locator('#id')</code></li><li><code>locator('[id^=...]')</code></li><li><code>locator('.duplicate-btn').nth(1)</code></li></ul></div><div class="hint-card challenge-card"><div class="hint-title">🎯 Try this</div><p>Click the second Save button. Then use a locator based on the dynamic button ID prefix to click Dynamic ID Action.</p></div></aside></div>
+        </section>
+        <section class="page" id="page-checks">
+          <div class="page-heading"><div class="eyebrow">PLAYGROUND / SELECTIONS</div><h1>Checkbox & Radio</h1><p>Practise selecting, deselecting, grouping, and validating checkbox and radio states.</p></div>
+          <div class="practice-layout"><div class="practice-card"><div class="card-head"><div><h2>Selection controls</h2><p>Choose options and check the live summary.</p></div><span class="badge">6 GROUPS</span></div>
+            <div class="selection-section"><h3>Skills <span class="sub-label">(select multiple)</span></h3><div class="choice-grid"><label class="choice"><input id="skill-playwright" name="skills" type="checkbox" value="Playwright"><span class="custom-check"></span>Playwright</label><label class="choice"><input id="skill-selenium" name="skills" type="checkbox" value="Selenium"><span class="custom-check"></span>Selenium</label><label class="choice"><input id="skill-api" name="skills" type="checkbox" value="API Testing"><span class="custom-check"></span>API Testing</label><label class="choice"><input id="skill-sql" name="skills" type="checkbox" value="SQL"><span class="custom-check"></span>SQL</label></div></div>
+            <div class="selection-section"><h3>Experience level <span class="sub-label">(choose one)</span></h3><div class="choice-grid"><label class="choice"><input type="radio" name="experience" value="Beginner" id="exp-beginner"><span class="custom-radio"></span>Beginner</label><label class="choice"><input type="radio" name="experience" value="Intermediate" id="exp-intermediate"><span class="custom-radio"></span>Intermediate</label><label class="choice"><input type="radio" name="experience" value="Advanced" id="exp-advanced"><span class="custom-radio"></span>Advanced</label></div></div>
+            <div class="selection-section"><h3>Preferred learning format</h3><div class="choice-grid"><label class="choice"><input type="checkbox" name="format" value="Video" id="format-video"><span class="custom-check"></span>Video</label><label class="choice"><input type="checkbox" name="format" value="Hands-on" id="format-hands-on"><span class="custom-check"></span>Hands-on</label><label class="choice"><input type="checkbox" name="format" value="Reading" id="format-reading"><span class="custom-check"></span>Reading</label></div></div>
+            <div class="form-actions"><button id="showSelections" class="primary-btn">Show Selections <span>→</span></button><button id="clearSelections" class="secondary-btn">Clear All</button></div><div id="selectionResult" class="result-box" role="status"><span class="result-dot"></span><span>Your selection summary will appear here.</span></div>
+          </div><aside class="practice-side"><div class="hint-card"><div class="hint-title">⌕ Locator ideas</div><ul><li><code>get_by_label()</code></li><li><code>get_by_role('checkbox')</code></li><li><code>get_by_role('radio')</code></li><li><code>locator('input:checked')</code></li><li><code>is_checked()</code></li></ul></div><div class="hint-card challenge-card"><div class="hint-title">🎯 Try this</div><p>Select two skills, choose Intermediate, then validate that the selected controls are checked and the others are not.</p></div></aside></div>
+        </section>
+        <section class="page" id="page-locators">
+          <div class="page-heading"><div class="eyebrow">LOCATOR LAB / CSS & XPATH</div><h1>Locator Playground</h1><p>Find elements using stable attributes, partial matches, text, and DOM relationships. IDs in this lab are intentionally dynamic.</p></div>
+          <div class="practice-card locator-card"><div class="card-head"><div><h2>Locator challenge elements</h2><p>Use the browser inspector and write locators for these examples.</p></div><span class="badge">CSS · XPATH</span></div>
+            <div class="locator-section"><h3>1. Dynamic IDs <span class="sub-label">ID suffix changes on refresh</span></h3><div class="locator-elements"><div class="locator-item"><label for="loc-user">User ID field</label><input id="loc-user" type="text" placeholder="Dynamic user id"/><span class="element-meta">ID prefix: user-field-</span></div><div class="locator-item"><label for="loc-order">Order Reference</label><input id="loc-order" type="text" placeholder="Dynamic order reference"/><span class="element-meta">ID contains: order</span></div><div class="locator-item"><label for="loc-end">Submit Reference</label><input id="loc-end" type="text" placeholder="Suffix locator practice"/><span class="element-meta">ID suffix: -submit</span></div></div></div>
+            <div class="locator-section"><h3>2. Attribute selectors</h3><div class="locator-elements"><div class="locator-item"><label>Exact attribute</label><button data-qa="exact-save" class="secondary-btn">Save Record</button><span class="element-meta">data-qa exact match</span></div><div class="locator-item"><label>Prefix attribute</label><button data-qa="action-delete-59371" class="secondary-btn">Delete Record</button><span class="element-meta">data-qa starts with action-</span></div><div class="locator-item"><label>Contains attribute</label><button data-qa="customer-action-edit-728" class="secondary-btn">Edit Customer</button><span class="element-meta">data-qa contains customer</span></div></div></div>
+            <div class="locator-section"><h3>3. Parent, child & sibling relationships</h3><div class="relationship-list"><article class="relationship-card"><div class="relationship-top"><span class="relation-tag">PARENT / CHILD</span><span class="element-meta">Card A</span></div><div class="product-card" id="product-card-a"><h4>Wireless Mouse</h4><p>Price: <strong>₹999</strong></p><button class="primary-btn product-add" data-product="Wireless Mouse">Add to Cart</button></div></article><article class="relationship-card"><div class="relationship-top"><span class="relation-tag">PARENT / CHILD</span><span class="element-meta">Card B</span></div><div class="product-card" id="product-card-b"><h4>Mechanical Keyboard</h4><p>Price: <strong>₹1,499</strong></p><button class="primary-btn product-add" data-product="Mechanical Keyboard">Add to Cart</button></div></article><article class="relationship-card"><div class="relationship-top"><span class="relation-tag">SIBLINGS</span><span class="element-meta">Label followed by input</span></div><div class="sibling-demo"><label for="sibling-account">Account Number</label><input id="sibling-account" name="account" type="text" placeholder="Enter account number"/><button class="secondary-btn" id="account-lookup" onclick="showLocatorMessage('Account lookup action triggered')">Lookup</button></div></article></div></div>
+            <div class="locator-section"><h3>4. Duplicate text elements</h3><p class="section-description">Multiple elements share the same text. Scope your locator or use an index carefully.</p><div class="duplicate-panel"><div class="duplicate-row"><span>Order #1001</span><button class="secondary-btn duplicate-view" onclick="showLocatorMessage('Viewed order 1001')">View Details</button></div><div class="duplicate-row"><span>Order #1002</span><button class="secondary-btn duplicate-view" onclick="showLocatorMessage('Viewed order 1002')">View Details</button></div><div class="duplicate-row"><span>Order #1003</span><button class="secondary-btn duplicate-view" onclick="showLocatorMessage('Viewed order 1003')">View Details</button></div></div></div>
+            <div id="locatorResult" class="result-box" role="status"><span class="result-dot"></span><span>Locator interactions will be shown here. Try Add to Cart or Lookup.</span></div>
+          </div>
+          <div class="locator-reference-grid"><div class="reference-card"><h3>CSS selector ideas</h3><code>[id^="user-field-"]</code><code>[id*="order"]</code><code>[id$="-submit"]</code><code>[data-qa="exact-save"]</code><code>[data-qa^="action-"]</code><code>.product-card:has(h4)</code></div><div class="reference-card"><h3>XPath ideas</h3><code>//input[starts-with(@id,"user-field-")]</code><code>//input[contains(@id,"order")]</code><code>//input[substring(@id,string-length(@id)-5)="submit"]</code><code>//h4[text()="Wireless Mouse"]/following-sibling::p</code><code>//div[contains(@class,"product-card")][.//h4[text()="Mechanical Keyboard"]]//button</code></div></div>
+        </section>
+        <section class="page" id="page-dropdowns"><div class="page-heading"><div class="eyebrow">COMING SOON</div><h1>Dropdowns</h1><p>This module is planned for the next release.</p></div></section>
+        <section class="page" id="page-tables"><div class="page-heading"><div class="eyebrow">COMING SOON</div><h1>Web Tables</h1><p>This module is planned for the next release.</p></div></section>
+        <section class="page" id="page-dialogs"><div class="page-heading"><div class="eyebrow">COMING SOON</div><h1>Dialogs & Alerts</h1><p>This module is planned for the next release.</p></div></section>
+        <section class="page" id="page-frames"><div class="page-heading"><div class="eyebrow">COMING SOON</div><h1>Frames</h1><p>This module is planned for the next release.</p></div></section>
+        <section class="page" id="page-dynamic"><div class="page-heading"><div class="eyebrow">COMING SOON</div><h1>Dynamic Elements</h1><p>This module is planned for the next release.</p></div></section>
+        <footer class="footer"><span>© 2026 QAOrbit</span><span>Explore. Practice. Automate.</span></footer>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/modules/input-fields.js"></script>
+  <script src="assets/js/modules/buttons.js"></script>
+  <script src="assets/js/modules/checkbox-radio.js"></script>
+  <script src="assets/js/modules/locators.js"></script>
+</body>
+</html>
